@@ -146,10 +146,11 @@ const Router = () => {
 
                         {/* ✅ Other Routes */}
                         <Route path="/studentpreneur-award" element={<StudentpreneurAward />} />
-                        <Route path="/register" element={<RegistrationPage />} />
-                        <Route path="/login" element={<LoginPage />} />
-                        <Route path="/dashboard" element={<DashboardPage />} />
                     </Route>
+
+                    <Route path="/register" element={<RegistrationPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/dashboard" element={<DashboardPage />} />
                 </Routes>
             )}
         </BrowserRouter>
