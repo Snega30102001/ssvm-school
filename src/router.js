@@ -77,7 +77,7 @@ const NavigationHandler = ({ setLoading }) => {
             setTimeout(() => {
                 if (window.ScrollTrigger) window.ScrollTrigger.refresh();
             }, 100);
-        }, 400); 
+        }, 200); 
 
         return () => clearTimeout(timer);
     }, [pathname, setLoading]);

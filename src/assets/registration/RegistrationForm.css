@@ -1,7 +1,9 @@
 :root {
-    --primary: #631542; /* Deep Maroon */
-    --primary-light: #8e2b65;
-    --accent: #D4AF37; /* Gold */
+    --primary: #e72142; /* Rich dark shade from logo */
+    --primary-light: #e74560;
+    --accent: #FFD300; /* Vibrant Yellow from logo */
+    --orange: #FF6B00; /* Vibrant Orange from logo */
+    --purple: #7B2CBF; /* Deep Purple from logo */
     --bg-light: #f8f9fa;
     --text-dark: #2d3436;
     --text-muted: #636e72;
@@ -11,7 +13,6 @@
 
 .registration-section {
     min-height: 100vh;
-    background: radial-gradient(circle at top right, #fff5f9 0%, #ffffff 50%, #f0f7ff 100%);
     padding: 120px 20px;
     display: flex;
     justify-content: center;
@@ -26,9 +27,8 @@
     position: absolute;
     top: -10%;
     right: -5%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(99, 21, 66, 0.05) 0%, transparent 70%);
+    width: 600px;
+    height: 600px;
     z-index: 0;
 }
 
@@ -93,7 +93,7 @@
     border-color: var(--primary);
     background: var(--primary);
     color: #fff;
-    box-shadow: 0 0 15px rgba(99, 21, 66, 0.3);
+    box-shadow: 0 0 15px rgba(145, 28, 71, 0.3);
 }
 
 .step-node.completed {
@@ -139,16 +139,16 @@
     font-size: 16px;
 }
 
-.step-header::after {
+/* .step-header::after {
     content: "";
     display: block;
     width: 200px;
     height: 40px;
     margin: 15px auto 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'%3E%3Cpath d='M100 20 C 120 0, 150 0, 180 20 C 150 40, 120 40, 100 20 C 80 40, 50 40, 20 20 C 50 0, 80 0, 100 20' fill='none' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='20' r='3' fill='%23D4AF37'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'%3E%3Cpath d='M100 20 C 120 0, 150 0, 180 20 C 150 40, 120 40, 100 20 C 80 40, 50 40, 20 20 C 50 0, 80 0, 100 20' fill='none' stroke='%23FFD300' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='20' r='3' fill='%23FFD300'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 
 /* Form Grid */
 .registration-form {
@@ -190,7 +190,7 @@
 .input-group textarea:focus {
     border-color: var(--primary);
     background: #fff;
-    box-shadow: 0 5px 15px rgba(99, 21, 66, 0.05);
+    box-shadow: 0 5px 15px rgba(145, 28, 71, 0.05);
     outline: none;
 }
 
@@ -220,7 +220,7 @@
 
 .nomination-card.selected {
     border-color: var(--primary);
-    background: rgba(99, 21, 66, 0.02);
+    background: rgba(145, 28, 71, 0.02);
 }
 
 .nomination-card h4 {
@@ -239,6 +239,27 @@
     margin-bottom: 15px;
     color: var(--primary);
     display: block;
+    transition: var(--transition);
+}
+
+.selected-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Custom File Upload Styling */
@@ -264,7 +285,7 @@
 
 .file-upload-area:hover {
     border-color: var(--primary);
-    background: rgba(99, 21, 66, 0.02);
+    background: rgba(145, 28, 71, 0.02);
 }
 
 .file-upload-area i {
@@ -380,7 +401,7 @@
     height: 60px;
     border-radius: 50%;
     background: #fff;
-    border: 5px solid rgba(99, 21, 66, 0.3);
+    border: 5px solid rgba(145, 28, 71, 0.3);
     cursor: pointer;
     transition: var(--transition);
 }
@@ -531,10 +552,10 @@
 }
 
 .btn-next {
-    background: linear-gradient(135deg, var(--primary) 0%, #8e44ad 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--orange) 50%, var(--purple) 100%);
     border: none;
     color: #fff;
-    box-shadow: 0 12px 24px rgba(99, 21, 66, 0.2);
+    box-shadow: 0 12px 24px rgba(145, 28, 71, 0.2);
     position: relative;
     overflow: hidden;
 }

@@ -1,29 +1,28 @@
 import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import RegistrationForm from '../Component/RegistrationForm';
 import CustomCursor from '../Component/Cursor';
 
 const RegistrationPage = () => {
-    const pageRef = useRef(null);
+    const location = useLocation();
+    const hasCategory = new URLSearchParams(location.search).get('category');
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        
-        // Simple entrance animation
-        const ctx = gsap.context(() => {
-            gsap.from(".registration-form-container", {
-                y: 100,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out"
-            });
-        }, pageRef);
+        if (!hasCategory) {
+            window.location.href = '/';
+        }
+    }, [hasCategory]);
 
-        return () => ctx.revert();
-    }, []);
+    if (!hasCategory) {
+        return null; // Redirecting...
+    }
 
     return (
-        <div className="registration-page-wrapper" ref={pageRef} style={{ background: '#f8f9fa' }}>
+        <div className="registration-page-wrapper">
             {/* Professional Mesh Background */}
             <div className="page-hero-bg" style={{
                 position: 'fixed',
@@ -35,8 +34,12 @@ const RegistrationPage = () => {
                 zIndex: 0,
                 pointerEvents: 'none'
             }}></div>
-
-            <div className="registration-content-wrapper" style={{ position: 'relative', zIndex: 1 }}>
+ 
+            <div className="registration-content-wrapper" style={{ 
+                position: 'relative', 
+                zIndex: 1,
+                flex: 1
+            }}>
                 <div className="registration-form-container">
                     <RegistrationForm />
                 </div>
