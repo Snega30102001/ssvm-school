@@ -106,11 +106,11 @@ const Navbar = () => {
 
                     {/* RIGHT SIDE */}
                     <div className="right_area">
-                        <img
-                            src={`${BASE_IMAGE_URL}initiative-logo.png`}
-                            className="initiative_logo"
-                            alt="initiative"
-                        />
+                            <img
+                                src={`${BASE_IMAGE_URL}initiative-logo.png`}
+                                className="initiative_logo"
+                                alt="initiative"
+                            />
                     </div>
                     <button
                         className="hamburger"

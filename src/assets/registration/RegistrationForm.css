@@ -90,16 +90,16 @@
 }
 
 .step-node.active {
-    border-color: var(--primary);
-    background: var(--primary);
-    color: #fff;
+    border-color: #000000;
+    background: #000000;
+    color: #f1ff33;
     box-shadow: 0 0 15px rgba(145, 28, 71, 0.3);
 }
 
 .step-node.completed {
-    border-color: var(--primary);
-    background: var(--primary);
-    color: #fff;
+    border-color: #000000;
+    background: #000000;
+    color: #f1ff33;
 }
 
 .step-label {
@@ -129,13 +129,13 @@
 .step-header h2 {
     font-family: "Sneaker", serif !important;
     font-size: 42px;
-    color: var(--primary);
+    color: #434343;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
 .step-header p {
-    color: var(--text-muted);
+    color: #515151;
     font-size: 16px;
 }
 
