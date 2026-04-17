@@ -143,12 +143,12 @@ const Router = () => {
                     <Route element={<Layout />}>
                         {/* ✅ Homepage */}
                         <Route path="/" element={<Homepage />} />
-
                         {/* ✅ Other Routes */}
                         <Route path="/studentpreneur-award" element={<StudentpreneurAward />} />
+                        <Route path="/register" element={<RegistrationPage />} />
                     </Route>
 
-                    <Route path="/register" element={<RegistrationPage />} />
+                    {/* ✅ Routes without Header/Footer */}
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/dashboard" element={<DashboardPage />} />
                 </Routes>
