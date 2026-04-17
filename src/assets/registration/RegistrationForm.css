@@ -1,12 +1,12 @@
 :root {
-    --primary: #e72142; /* Rich dark shade from logo */
-    --primary-light: #e74560;
-    --accent: #FFD300; /* Vibrant Yellow from logo */
-    --orange: #FF6B00; /* Vibrant Orange from logo */
-    --purple: #7B2CBF; /* Deep Purple from logo */
+    --primary: #000000; 
+    --primary-light: #2d3436;
+    --accent: #F2FF33; 
+    --orange: #FF6B00; 
+    --purple: #7B2CBF; 
     --bg-light: #f8f9fa;
-    --text-dark: #2d3436;
-    --text-muted: #636e72;
+    --text-dark: #000000;
+    --text-muted: #616161;
     --border-radius: 16px;
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -92,14 +92,14 @@
 .step-node.active {
     border-color: #000000;
     background: #000000;
-    color: #f1ff33;
-    box-shadow: 0 0 15px rgba(145, 28, 71, 0.3);
+    color: #F2FF33;
+    box-shadow: 0 0 15px rgba(242, 255, 51, 0.2);
 }
 
 .step-node.completed {
     border-color: #000000;
     background: #000000;
-    color: #f1ff33;
+    color: #F2FF33;
 }
 
 .step-label {
@@ -113,7 +113,7 @@
 }
 
 .step-node.active + .step-label {
-    color: var(--primary);
+    color: #000000;
 }
 
 /* Form Content Area */
@@ -188,9 +188,9 @@
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
-    border-color: var(--primary);
+    border-color: #000;
     background: #fff;
-    box-shadow: 0 5px 15px rgba(145, 28, 71, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     outline: none;
 }
 
@@ -219,8 +219,15 @@
 }
 
 .nomination-card.selected {
-    border-color: var(--primary);
-    background: rgba(145, 28, 71, 0.02);
+    border-color: #000000;
+    background: #000000;
+    color: #F2FF33;
+}
+
+.nomination-card.selected h4,
+.nomination-card.selected p,
+.nomination-card.selected i {
+    color: #F2FF33 !important;
 }
 
 .nomination-card h4 {
@@ -246,8 +253,8 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: var(--primary);
-    color: #fff;
+    background: #F2FF33;
+    color: #000;
     font-size: 10px;
     font-weight: 800;
     padding: 4px 10px;
@@ -362,7 +369,7 @@
     transform: translate(-50%, -50%) !important;
     width: 6px !important;
     height: 6px !important;
-    background: var(--primary) !important;
+    background: #000 !important;
     border-radius: 50% !important;
 }
 
@@ -471,8 +478,8 @@
 
 .retake-btn {
     position: relative !important;
-    background: var(--primary);
-    color: #fff;
+    background: #000;
+    color: #F2FF33;
     border: none;
     padding: 6px 15px;
     border-radius: 20px;
@@ -516,9 +523,9 @@
 }
 
 .choice-btn.active {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
+    background: #000;
+    color: #F2FF33;
+    border-color: #000;
 }
 
 /* Navigation Buttons */
@@ -552,17 +559,17 @@
 }
 
 .btn-next {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--orange) 50%, var(--purple) 100%);
+    background: #000;
     border: none;
-    color: #fff;
-    box-shadow: 0 12px 24px rgba(145, 28, 71, 0.2);
+    color: #F2FF33;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
 
 .btn-next:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 18px 36px rgba(99, 21, 66, 0.3);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
 }
 
 /* Success styling */
